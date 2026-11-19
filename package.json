@@ -16,7 +16,7 @@
     "ecosystem-ci": "pnpm test && pnpm build && pnpm test:storybook"
   },
   "devDependencies": {
-    "@chromatic-com/cypress": "latest",
+    "@chromatic-com/cypress": "https://pkg.pr.new/@chromatic-com/cypress@e912aad",
     "@playwright/test": "1.61.0",
     "@types/node": "26.0.0",
     "@types/react": "19.2.17",
