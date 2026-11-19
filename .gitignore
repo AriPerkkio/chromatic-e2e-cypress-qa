@@ -1,0 +1,11 @@
+node_modules
+.env
+build-archive.log
+storybook-static
+test-results
+cypress/downloads
+cypress/screenshots
+cypress/videos
+
+# We want to install latest versions of dependencies with "@latest"
+pnpm-lock.yaml

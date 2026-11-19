@@ -1,0 +1,35 @@
+{
+  "name": "@chromatic-com/e2e-demo-cypress",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Showcases a real-world demo of E2E Visual Tests with Chromatic and Cypress",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "test": "start-server-and-test dev http://localhost:5173 test:cypress",
+    "test:cypress": "ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 cypress run",
+    "test:storybook": "playwright test --config e2e/playwright.config.ts",
+    "build": "build-archive-storybook",
+    "preview": "archive-storybook",
+    "chromatic": "chromatic --cypress --project-token=$CHROMATIC_PROJECT_TOKEN",
+    "ecosystem-ci": "pnpm test && pnpm build && pnpm test:storybook"
+  },
+  "devDependencies": {
+    "@chromatic-com/cypress": "latest",
+    "@playwright/test": "1.61.0",
+    "@types/node": "26.0.0",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "chromatic": "18.15.0",
+    "cypress": "16.3.0",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "sass-embedded": "1.100.0",
+    "start-server-and-test": "3.0.13",
+    "typescript": "^5",
+    "vite": "^8"
+  },
+  "packageManager": "pnpm@10.33.4"
+}
